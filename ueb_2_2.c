@@ -3,8 +3,8 @@
 #include <float.h>
 #include <stdlib.h>
 
-#define ICH_DEBUGGE
-#define DEBUGLEVEL2
+//#define ICH_DEBUGGE
+//#define DEBUGLEVEL2
 #define MAX_LEN 512
 
 int mybuff(void);
@@ -34,12 +34,17 @@ int main(int argc, char** argv){
     printf("Geben sie einen int und double durch ; getrennt ein:\n");
     anzahlScanf = scanf("%d;%lf", &iWert, &dbWert);
     printf("Eswurden %d Zahlen eingelsen\n", anzahlScanf);
-    printf("%d %lf", iWert, dbWert);
+    printf("%d %lf\n", iWert, dbWert);
 
     printf("Geben sie einen beliebigen text ein: \n");
-    scanf("%s", str);
+    //scanf("%s", str);
+    //printf("%s\n", str);
+
+    mybuff();
+    fgets(str, MAX_LEN, stdin);
+
     
-    printf("%s\n", str);
+    printf("%s", str);
 
     return 0;
 }
